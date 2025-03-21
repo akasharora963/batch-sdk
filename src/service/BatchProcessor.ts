@@ -22,7 +22,7 @@ export class BatchProcessor {
           const balance = await multicall.getFunction("getEthBalance").staticCall(address);
           return { address, balance: ethers.formatEther(balance) };
         } catch (error) {
-          console.error(`Failed to fetch balance for ${address}:`, error);
+          //console.error(`Failed to fetch balance for ${address}:`, error);
           return { address, balance: "0" }; 
         }
       })
